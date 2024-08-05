@@ -4,7 +4,7 @@ this theme based from [Brave-Fox](https://github.com/Soft-Bred/Brave-Fox/) by [S
 
 ![Frfx-brv](https://github.com/user-attachments/assets/06d32382-9252-47e8-9060-890c4c449231)
 
-## Whats New
+## What's Changed
 1. Change some icon on navbar like back, forward, refresh, extension, hamburger menu
 2. Adding full icon on Popup menu like brave css based from Material-Fox
 3. Adding tab separator, css from firefox-csshacks-master
