@@ -14,7 +14,7 @@ this theme based on Brave-Fox] from Soft-Bred.
 
 ## How To Install
 1. Go to the URL `about:config`
-2. Ensure the following preferences are !true:
+2. Ensure the following preferences are **true**:
     ```
     toolkit.legacyUserProfileCustomizations.stylesheets
     svg.context-properties.content.enabled
@@ -29,4 +29,4 @@ this theme based on Brave-Fox] from Soft-Bred.
 
 ## Color Theme
 I Make theme color on addons mozilla for make looks like brave
-![Brave-Theme](https://addons.mozilla.org/en-US/firefox/user/18534883/)
+[Brave-Theme](https://addons.mozilla.org/en-US/firefox/user/18534883/)
