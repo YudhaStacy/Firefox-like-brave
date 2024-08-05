@@ -247,3 +247,7 @@ panel {
   padding: var(--uc-panel-zoom-button-padding)
     calc(var(--uc-panel-zoom-button-padding) / 2) !important;
 }
+#unified-extensions-view toolbarseparator {
+  margin: 0 !important;
+}
+
