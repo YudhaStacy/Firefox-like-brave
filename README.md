@@ -37,7 +37,7 @@ I Make theme color on addons mozilla for make looks like brave
 [Brave-Theme](https://addons.mozilla.org/en-US/firefox/user/18534883/)
 
 # Credits
-[Brave-Fox](https://github.com/Soft-Bred/Brave-Fox/) by [Soft-Bred](https://github.com/Soft-Bred/)
-[Material-Fox](https://github.com/edelvarden/material-fox-updated) by [edelvarden](https://github.com/edelvarden)
-[firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks) by [MrOtherGuy](https://github.com/MrOtherGuy/)
+- [Brave-Fox](https://github.com/Soft-Bred/Brave-Fox/) by [Soft-Bred](https://github.com/Soft-Bred/)
+- [Material-Fox](https://github.com/edelvarden/material-fox-updated) by [edelvarden](https://github.com/edelvarden)
+- [firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks) by [MrOtherGuy](https://github.com/MrOtherGuy/)
 
