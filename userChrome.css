@@ -41,8 +41,8 @@
   --inline-tab-padding: 8px !important; /*Width pinned tab*/
   --toolbarbutton-border-radius: 8px !important;
   --hover-bg-colour: color-mix(in srgb, currentColor 11%, transparent) !important;
-  --toolbar-field-focus-border-color: light-dark(#8f8ce6,#232271 ) !important;
-  --toolbar-start-end-padding:  6px !important; /*make backwrd no margin left*/
+  /*--toolbar-field-focus-border-color: light-dark(#8f8ce6,#232271 ) !important;*/ /*url bar focused border color*/
+  --toolbar-start-end-padding:  6px !important; 
   --urlbar-icon-padding: calc((var(--urlbar-min-height) - 2px - 2px - 10px ) / 2) !important;
 }
 
@@ -50,8 +50,8 @@ toolbarbutton {
     padding: 0 3px; !important}
 
 
-/*dark background while load page
-#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html { background: #21272a !important; }
+/*color page when page loading same as toolbar bg
+#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html { background: var(--toolbar-bgcolor) !important; }
 */
 
 *{
