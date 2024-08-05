@@ -34,7 +34,7 @@
 /* Fixed By Bred For Brave-Fox                 */
 :root:not([uidensity="compact"]) .tab-content[pinned] {
     padding-top: 0px !important;
-    padding-right: 0px !important;
+    padding-right: 8px !important;
     padding-bottom: 0px !important;
-    padding-left: 9px !important;
+    padding-left: 8px !important;
 }
