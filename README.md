@@ -1,6 +1,6 @@
 # Firefox-Like-Brave
 make firefox look like brave now!
-this theme based on Brave-Fox by Soft-Bred.
+this theme based from [Brave-Fox](https://github.com/Soft-Bred/Brave-Fox/) by [Soft-Bred](https://github.com/Soft-Bred/).
 
 ![Frfx-brv](https://github.com/user-attachments/assets/06d32382-9252-47e8-9060-890c4c449231)
 
@@ -12,7 +12,7 @@ this theme based on Brave-Fox by Soft-Bred.
 5. context menu look like chrome/brave, this css from Material-Fox
 
 ## Preview
-![Preview](https://github.com/user-attachments/assets/57b5d273-fbf4-47cc-9ba4-35fbc7bb8321)
+![Preview(2)](https://github.com/user-attachments/assets/7f5eefd8-4913-4a52-a66d-e234e8cc69d0)
 
    
 ## How To Install
@@ -22,7 +22,7 @@ this theme based on Brave-Fox by Soft-Bred.
     toolkit.legacyUserProfileCustomizations.stylesheets
     svg.context-properties.content.enabled
     ```
-4. Go to the URL about:support.
+4. Go to the URL `about:support`.
 5. Find the Profile Folder category and click the Open Folder button.
 6. make folder `chrome`
 7. Download this repository by clicking code green buton and download zip
@@ -30,7 +30,7 @@ this theme based on Brave-Fox by Soft-Bred.
 9. Enjoy
 
 ### Note
-I'm not a css expexrt, some files are not neat. 
+I'm not a css expexrt, some files are not neat 😁. 
 
 ## Color Theme
 I Make theme color on addons mozilla for make looks like brave
