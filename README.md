@@ -1,6 +1,6 @@
 # Firefox-Like-Brave
 make firefox look like brave now!
-this theme based on Brave-Fox from Soft-Bred.
+this theme based on Brave-Fox by Soft-Bred.
 
 ![Frfx-brv](https://github.com/user-attachments/assets/06d32382-9252-47e8-9060-890c4c449231)
 
@@ -36,7 +36,7 @@ I'm not a css expexrt, some files are not neat.
 I Make theme color on addons mozilla for make looks like brave
 [Brave-Theme](https://addons.mozilla.org/en-US/firefox/user/18534883/)
 
-#Credits
+# Credits
 [Brave-Fox](https://github.com/Soft-Bred/Brave-Fox/) by [Soft-Bred](https://github.com/Soft-Bred/)
 [Material-Fox](https://github.com/edelvarden/material-fox-updated) by [edelvarden](https://github.com/edelvarden)
 [firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks) by [MrOtherGuy](https://github.com/MrOtherGuy/)
