@@ -38,7 +38,7 @@ I Make theme color on addons mozilla for make looks like brave
 
 ## Optional
 If you want netab and homepage background color same as toolbar color, just setting like this and disable all **Firefox Home Content**
-<img src="https://github.com/user-attachments/assets/597f90e5-5415-48b8-b8a0-a24e1ec9f93d" height=50%>
+<img src="https://github.com/user-attachments/assets/597f90e5-5415-48b8-b8a0-a24e1ec9f93d" width="50%" height=50%>
 
 
 ### Note
