@@ -1,0 +1,143 @@
+/*
+╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+║ Name                     ║ Brave Button Icons                                                                      ║
+╠══════════════════════════╬═════════════════════════════════════════════════════════════════════════════════════════╣
+║ Description              ║ Makes Back & Forward Buttons resemble that of Brave Browser                             ║
+╠══════════════════════════╬═════════════════════════════════════════════════════════════════════════════════════════╣
+║ Sub-Folder               ║ userChrome.css                                                                          ║
+╠══════════════════════════╬═════════════════════════════════════════════════════════════════════════════════════════╣
+║ Notable Help             ║ u/It_Was_The_Other_Guy                                                                  ║
+╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+/* Change Forward Button */
+#forward-button {
+  list-style-image: url("Brave-Fox Images/browser-forward.svg") !important;
+}
+
+/* Change Back Button */
+#back-button {
+  list-style-image: url("Brave-Fox Images/browser-back.svg") !important;
+}
+
+/* Change Reload Button */
+#reload-button {
+  list-style-image: url("Brave-Fox Images/browser-refresh.svg") !important;
+}
+
+/* Change Bookmark Icon */
+#star-button {
+  list-style-image: url("Brave-Fox Images/Bookmark.svg") !important;
+}
+#star-button[starred] {
+  list-style-image: url("Brave-Fox Images/bookmark Filled.svg") !important;
+}
+
+/* Change Menu Icon */
+#PanelUI-menu-button > stack:nth-child(1) > image:nth-child(1) {
+  list-style-image: url("Brave-Fox Images/browser-menu.svg") !important;
+  align-self: center;
+}
+
+#unified-extensions-button {
+  list-style-image: url("Brave-Fox Images/browser-extensions.svg") !important;
+}
+#unified-extensions-button[open] {
+  fill: #5d73e2 !important;
+}
+
+#downloads-button {
+  list-style-image: url("Brave-Fox Images/download.svg") !important;
+}
+
+#stop-button {
+  list-style-image: url("Brave-Fox Images/close.svg") !important;
+}
+
+/* Make Menu Icon Box Normal Sized */
+#PanelUI-menu-button > stack:nth-child(1) {
+  height: 26px !important;
+  width: 26px !important;
+}
+
+/* Make Reload Slightly Bigger */
+.reload-button.toolbarbutton-1 {
+  padding: 4.7px !important;
+}
+
+/* New Tab Button */
+#tabs-newtab-button,
+#new-tab-button {
+  list-style-image: url("Brave-Fox Images/plus-add.svg") !important;
+}
+
+/* Change Close Button */
+.tab-close-button {
+  list-style-image: url("Brave-Fox Images/Close Tab.svg") !important;
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+  padding: 0 !important;}
+
+toolbar .toolbarbutton-1 {
+  & > .toolbarbutton-icon,
+  & > .toolbarbutton-text,
+  & > .toolbarbutton-badge-stack {
+    padding: 3px;
+  }
+}
+> .toolbarbutton-icon,
+> .toolbarbutton-badge-stack > .toolbarbutton-icon {
+  width: 0 !important;
+}
+
+.toolbarbutton-badge-stack > .toolbarbutton-icon[label]:not([label=""]) {
+  margin-inline-end: 0;
+}
+
+#identity-icon-label {
+  display: none;
+}
+#identity-box[pageproxystate="valid"].notSecure::after {
+  width: 0px;
+}
+
+#identity-permission-box {
+  display: none !important;
+}
+
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+  list-style-image: url("Brave-Fox Images/tune-small.svg") !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecure #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveContent #identity-icon,
+#identity-box[pageproxystate="valid"].httpsOnlyErrorPage #identity-icon {
+  list-style-image: url("Brave-Fox Images/warning.svg") !important;
+}
+/*change newtab icon to globe like brave
+.tab-icon-image[src="chrome://branding/content/icon32.png"],
+.tab-icon-image[src="chrome://browser/skin/privatebrowsing/favicon.svg"]
+{
+  content: url("Brave-Fox Images/globe.svg") !important;
+}*/
+
+#TabsToolbar {
+  --toolbarbutton-inner-padding: 5px !important; /* size new tab*/
+}
+
+.urlbarView-button-menu {
+  background-color: transparent !important;}
+
+.urlbarView-button {
+  &:is(:hover, [open]) {
+    color: var(--urlbarView-result-button-selected-color) !important;}
+  
+
+#reader-mode-button {
+  width: 28px !important;;
+  height: 28px !important;;
+  margin-right: 2px !important;
+}
+

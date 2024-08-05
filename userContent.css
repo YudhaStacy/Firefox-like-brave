@@ -1,0 +1,28 @@
+@import url("private browsing/Brave Incognito New Tab.css");
+.personalize-button {
+  display: none !important;
+}
+/*
+:root {
+  --window-colour: #21272a;
+  --secondary-colour: #2a2a2a;
+  --inverted-colour: #fafafc;
+  --third-colour: #222222;
+}
+
+@-moz-document url("about:newtab"),
+              url("about:home") {
+  :root[lwt-newtab-brighttext] {
+    --newtab-background-color: var(--toolbar) !important;
+  }
+}
+
+
+
+@-moz-document url(about:blank), url(about:newtab) {
+  #newtab-window,
+  html:not(#ublock0-epicker) {
+    background: var(--window-colour) !important;
+  }
+}
+*/

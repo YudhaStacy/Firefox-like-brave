@@ -1,0 +1,26 @@
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_separator_lines.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Bring back tab separator lines that were removed in Proton */
+/* Define border for tab elements */
+.tabbrowser-tab {
+  border-inline-start: 1px solid transparent !important;
+  border-image: 0 1 linear-gradient(
+    transparent 30%,
+    color-mix(in srgb, currentColor 30%, transparent) 30%,
+    color-mix(in srgb, currentColor 30%, transparent) 70%,
+    transparent 30%
+  ) !important;
+}
+
+/* Remove border image for various tab states */
+.tabbrowser-tab:hover,
+.tabbrowser-tab[pinned],
+.tabbrowser-tab[pinned]+.tabbrowser-tab,
+.tabbrowser-tab:first-child,
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:hover + .tabbrowser-tab:not([first-visible-unpinned-tab]),
+.tabbrowser-tab[selected],
+.tabbrowser-tab[multiselected],
+#tabbrowser-arrowscrollbox[overflowing] > .tabbrowser-tab[first-visible-unpinned-tab],
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[multiselected] + .tabbrowser-tab,
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[selected] + .tabbrowser-tab { border-image: none !important; }

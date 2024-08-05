@@ -1,0 +1,249 @@
+:root {
+  --md-elevation-2: 0 2px 4px 0 rgba(0, 0, 0, 0.28);
+  --context-menu-bg: #292a2d;
+  --arrowpanel-background: light-dark(#ffffff, #292a2d) !important;
+}
+@media (-moz-platform: windows), (-moz-platform: linux) {
+  menupopup,
+  panel:not(#autoscroller) {
+    --panel-border-radius: 5px !important;
+    border-radius: var(--panel-border-radius) !important;
+    --panel-padding-block: 8px !important;
+    --panel-padding: var(--panel-padding-block) 0 !important;
+  }
+  menu,
+  menuitem,
+  menucaption {
+    border-radius: 0 !important;
+  }
+  .menupopup-arrowscrollbox {
+    /*! background-color: var(--context-menu-bg) !important; */
+    border: none !important;
+    box-shadow: var(--md-elevation-2) !important;
+  }
+  menuseparator::before {
+    margin-inline-start: 0px !important;
+    margin-inline-end: 0px !important;
+  }
+  menuseparator {
+    padding-inline: 0 !important;
+  }
+  #context-navigation:not([hidden]) {
+    min-width: 220px !important;
+    background-color: inherit;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #context-navigation:not([hidden]) .menuitem-iconic {
+    position: relative !important;
+  }
+  #context-navigation:not([hidden]) .menuitem-iconic::after {
+    display: grid;
+    place-items: start;
+    align-items: center;
+    content: attr(aria-label);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  #context-navigation:not([hidden]) .menu-iconic-icon {
+    visibility: hidden !important;
+  }
+  [dir="rtl"] #context-navigation:not([hidden]) .menuitem-iconic::after {
+    place-items: end;
+    align-items: center !important;
+    left: unset;
+    right: calc(-1 * var(--md-menuitem-padding-without-icon)) !important;
+  }
+  #context-navigation
+    > .menuitem-iconic
+    > .menu-iconic-left
+    > .menu-iconic-icon {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  #context-navigation
+    > .menuitem-iconic
+    > .menu-iconic-left
+    > .menu-iconic-icon,
+  menupopup > menu,
+  menupopup > menuitem,
+  menupopup > menucaption {
+    min-height: 24px !important;
+    max-height: 24px !important;
+  }
+}
+@media (-moz-platform: windows) {
+  :root,
+  html,
+  body {
+    --md-menuitem-padding-with-icon: 1em;
+    --md-menuitem-padding-without-icon: calc(1em + 16px + 8px);
+  }
+  #contentAreaContextMenu
+    :is(menuitem, menu):not(
+      [image],
+      .menu-iconic,
+      .menuitem-iconic,
+      [type="checkbox"]
+    ) {
+    padding-inline-start: var(--md-menuitem-padding-without-icon) !important;
+  }
+  #contentAreaContextMenu
+    :is(menuitem, menu):is([image], .menu-iconic, .menuitem-iconic) {
+    padding-inline-start: var(--md-menuitem-padding-with-icon) !important;
+  }
+  #contentAreaContextMenu menuitem[checked="true"] {
+    padding-inline-start: var(--md-menuitem-padding-with-icon) !important;
+  }
+  #contentAreaContextMenu menuitem[type="checkbox"] > .menu-iconic-left {
+    margin-inline-end: 0 !important;
+  }
+  #contentAreaContextMenu
+    menuitem[type="checkbox"]:is([checked="true"])
+    > .menu-iconic-left {
+    margin-inline-end: 8px !important;
+  }
+  #contentAreaContextMenu
+    menuitem[checked="true"]
+    > .menu-iconic-left
+    .menu-iconic
+    > .menu-iconic-left,
+  #contentAreaContextMenu .menuitem-iconic > .menu-iconic-left {
+    margin-inline-end: 8px !important;
+  }
+  #tabContextMenu
+    :is(menuitem, menu):not([image], .menu-iconic, .menuitem-iconic) {
+    padding-inline-start: var(--md-menuitem-padding-without-icon) !important;
+  }
+  #context-navigation:not([hidden]) .menuitem-iconic {
+    position: relative !important;
+  }
+  #context-navigation:not([hidden]) .menuitem-iconic::after {
+    padding-inline-start: var(--md-menuitem-padding-without-icon) !important;
+  }
+  [dir="rtl"] #context-navigation:not([hidden]) .menuitem-iconic::after {
+    padding-inline-start: unset !important;
+    padding-inline-end: var(--md-menuitem-padding-with-icon) !important;
+  }
+  .menu-right {
+    margin-inline-end: 12px !important;
+  }
+}
+@media (-moz-platform: windows), (-moz-platform: linux) {
+  menu[disabled="true"],
+  menuitem[disabled="true"] {
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  menu:where([_moz-menuactive="true"]):not([disabled="true"]),
+  menuitem:where([_moz-menuactive="true"]):not([disabled="true"]) {
+    background-color: var(--button-hover-bgcolor) !important;
+    color: inherit !important;
+  }
+  #context-bookmarkpage,
+  #context-bookmarklink {
+    display: none !important;
+  }
+  #context-pocket,
+  #context-savelinktopocket {
+    display: none !important;
+  }
+  #context-inspect-a11y {
+    display: none !important;
+  }
+  #context-sendimage {
+    display: none !important;
+  }
+  #context-sendvideo {
+    display: none !important;
+  }
+}
+
+#context-sep-selectall {
+  display: none;
+}
+
+menulist > menupopup {
+  --panel-shadow: var(--md-elevation-2) !important;
+  --panel-border-color: none !important;
+}
+
+:root,
+html,
+body,
+menupopup,
+panel {
+  --panel-border-color: var(--md-menu-border-color) !important;
+  --panel-shadow: var(--md-elevation-2) !important;
+  --windows-panel-box-shadow: var(--md-elevation-2) !important;
+}
+/*
+:is(menupopup, panel):where([type="arrow"]) {
+  --panel-background: menu !important;
+}*/
+
+#appMenu-popup .subviewbutton {
+  appearance: none;
+  margin: 0 !important;
+  min-height: 24px !important;
+  padding: 0 15px !important;
+  border-radius: 0 !important;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.panel-subview-body {
+  margin: 5px 0 !important;
+}
+
+/* Edge-Frfox - popup.css */
+
+/*
+  MARK: Variables
+*/
+:root {
+  --uc-arrowpanel-menuicon-margin-inline: 14px;
+  --uc-arrowpanel-menuitem-margin-inline: 4px;
+  --uc-arrowpanel-menuitem-margin-block: 2px;
+  --panel-separator-margin-vertical: 8px !important;
+  --panel-separator-margin-horizontal: 0 !important;
+}
+/*
+  MARK: App menu
+*/
+.widget-overflow-list
+  .toolbarbutton-1:not(.toolbarbutton-combined)
+  > .toolbarbutton-text,
+.subviewbutton:not(#appMenu-zoom-controls > .subviewbutton)
+  > .toolbarbutton-icon
+  + .toolbarbutton-text,
+#appMenu-fxa-label2 > vbox {
+  padding-inline-start: var(--uc-arrowpanel-menuicon-margin-inline) !important;
+}
+
+/* special case menuitems with no icons */
+#appMenu-zoom-controls > .toolbarbutton-text,
+#fxa-manage-account-button > vbox,
+#PanelUI-fxa-menu-syncnow-button > hbox {
+  padding-inline-start: calc(
+    16px + var(--uc-arrowpanel-menuicon-margin-inline)
+  ) !important;
+}
+
+.subviewbutton > .toolbarbutton-icon {
+  width: 16px !important;
+}
+
+#appMenu-zoom-controls > .subviewbutton {
+  padding: 5px 0px !important;
+  margin: 0 6px !important;
+}
+
+#appMenu-zoom-controls > #appMenu-zoomReset-button2 {
+  padding: var(--uc-panel-zoom-button-padding)
+    calc(var(--uc-panel-zoom-button-padding) / 2) !important;
+}

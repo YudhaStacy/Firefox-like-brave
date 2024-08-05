@@ -1,0 +1,285 @@
+/*
+╔══════════════════════════╦═════════════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
+║ Name                     ║ Main Import                                                                             ║
+╠══════════════════════════╬═════════════════════════════════════════════════════════════════════════════════════════╣
+║ Description              ║ Main Import For Brave-Fox, Allows User To Turn Stuff On & Off                           ║
+╠══════════════════════════╬═════════════════════════════════════════════════════════════════════════════════════════╣
+║ Sub-Folder               ║ userChrome.css & userContent.css                                                        ║
+╚══════════════════════════╩═════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+
+
+@import url("Optionals.css");
+@import url("Brave Button Icons.css");
+@import url("Toolbar.css");
+@import url("Tabs/Sound Playing.css");
+@import url("Tabs/Close Button Antics.css");
+@import url("Tabs/Murder Proton Tab Spacing.css");
+@import url("Private Browsing/Brave Incognito Colours.css");
+@import url(popup.css);
+@import url(icons/icons.css);
+@import url("tab_separator_lines.css");
+@import url("Fancy Animation Zone.css");
+@import url("compact-extension.css");
+@import url(inline_tab_audio_icons.css);
+
+
+/* remove gap pinned and not pinned tab*/
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  margin-inline-start: 0 !important;
+}
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs]) > #tabbrowser-arrowscrollbox > .tabbrowser-tab:nth-child(1 of :not([pinned], [hidden])) {
+  /* Add a gap between the last pinned tab and the first visible tab */
+  margin-inline-start: 0 !important; /* .tabbrowser-tab sets margin: 0 !important; */
+}
+
+
+:root {
+  --tab-min-height: 31px !important;
+  --inline-tab-padding: 8px !important; /*Width pinned tab*/
+  --toolbarbutton-border-radius: 8px !important;
+  --hover-bg-colour: color-mix(in srgb, currentColor 11%, transparent) !important;
+  --toolbar-field-focus-border-color: light-dark(#8f8ce6,#232271 ) !important;
+  --toolbar-start-end-padding:  6px !important; /*make backwrd no margin left*/
+  --urlbar-icon-padding: calc((var(--urlbar-min-height) - 2px - 2px - 10px ) / 2) !important;
+}
+
+toolbarbutton {
+    padding: 0 3px; !important}
+
+
+/*dark background while load page
+#browser vbox#appcontent tabbrowser, #content, #tabbrowser-tabpanels, browser[type=content-primary], browser[type=content] > html { background: #21272a !important; }
+*/
+
+*{
+  font-family: 'Segoe UI' !important;
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box {
+  background: : none !important;
+};
+
+#urlbar[focused=true] {
+outline: none !important;
+}
+
+
+
+
+
+#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+  list-style-image: ;
+}
+
+#tabbrowser-tabs {--tab-loading-fill: #349aff !important;}
+
+/*Hover active focus toolbar button*/
+toolbar .toolbarbutton-1 {
+  &:not([disabled]) {
+    &:hover > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+      background-color: #0000001a !important;
+      color: inherit;
+    }
+  }
+}
+
+toolbar .toolbarbutton-1 {
+  &:not([disabled]) {
+    &:active > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+      background-color: #0000004f !important;
+      color: inherit;
+      transition: 300ms !important;
+    }
+  }
+}
+
+toolbar .toolbarbutton-1 {
+  &:not([disabled]) {
+    &:is([open], [checked], :hover:active) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack){
+      background-color: #0000004f !important;
+      color: inherit;
+      transition: 300ms !important;
+    }
+  }
+}
+
+/*Change hoover add tab*/
+#tabs-newtab-button {
+  &:not([disabled]) {
+    &:hover > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+      background-color: color-mix(in srgb, currentColor 11%, transparent) !important;
+      color: inherit;
+    }
+  }
+}
+
+#tabs-newtab-button {
+  &:not([disabled]) {
+    &:active > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack) {
+      background-color: var(--tab-selected-bgcolor) !important;
+      color: inherit;
+      transition: 300ms !important;
+    }
+  }
+}
+
+#tabs-newtab-button {
+  &:not([disabled]) {
+    &:is([open], [checked], :hover:active) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack){
+      background-color: var(--tab-selected-bgcolor) !important;
+      color: inherit;
+      transition: 300ms !important;
+    }
+  }
+}
+/*endline*/
+
+:root {
+  &[lwtheme] {
+    --tab-selected-outline-color: transparent !important;
+  }
+}
+
+/*border pinned tab*/
+.tab-loading-burst[pinned] {
+  border: 1px solid var(--hover-bg-colour) !important;
+}
+
+.tabbrowser-tab:hover .tab-loading-burst[pinned] {
+  opacity: 0 !important;
+}
+
+
+.tabbrowser-tab[selected]
+.tab-loading-burst[pinned] {
+  border: 0px solid var(--tab-selected-bgcolor) !important;
+}
+.tab-text.tab-label {
+  margin-left: 4px !important;
+}
+
+.titlebar-spacer {
+  display: none !important;
+}
+
+
+#TabsToolbar #firefox-view-button:hover:not([open]) > .toolbarbutton-icon, .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected], [multiselected]) {
+  background-color: var(--hover-bg-colour) !important}
+
+
+
+
+
+/*identity background only on hover*/
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button {
+  &:hover:not([open]) {
+    background-color: var(--urlbar-box-hover-bgcolor) !important;
+    color: var(--urlbar-box-hover-text-color);
+  }
+}
+
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button, #urlbar-label-box {
+  background-color: transparent !important;
+  color: var(--urlbar-box-text-color);
+  padding-inline: 8px;
+  border-radius: var(--urlbar-icon-border-radius);
+}
+
+
+
+/*url open*/
+.urlbarView-row-inner {
+  padding-inline: 15px !important;
+}
+
+.urlbarView-row{
+  border-radius: 0px !important;
+}
+.urlbarView{
+  margin-inline: 0 !important;
+  width: 100% !important;
+  border-inline: 1px solid transparent;
+}
+
+.urlbar-go-button{display: none !important;}
+
+var(--urlbar-icon-padding)
+
+@media (-moz-bool-pref: "browser.urlbar.richSuggestions.featureGate") {
+  #urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] > .identity-box-button {
+    padding-inline: var(--urlbar-icon-padding) !important;;
+  }
+}
+
+#identity-box {
+  margin-inline-end: 0px !important;
+}
+
+/*make fav icon hidden while playing audio*/
+.tab-icon-overlay {
+  &:not([crashed]) {
+    &:is([pinned], [sharing]) {
+      stroke: transparent !important;;
+      top: 0 !important;;
+      inset-inline-end: -1px !important;;
+      padding: 0.5px !important;;
+      inset-inline-end: 0;
+    }
+  }
+}
+
+
+.tabbrowser-tab[pinned][soundplaying] .tab-icon-image {
+  opacity: 0 !important;
+}
+.tabbrowser-tab[pinned][muted] .tab-icon-image {
+  opacity: 0 !important;
+}
+
+
+
+/*throbber*/
+.tab-throbber[busy]::before {
+  display: none !important;
+}
+  
+.tab-throbber[busy]{background-image:url("Brave-Fox Images/chromium-throbber-proggres.svg")!important;
+filter: grayscale(70%);
+}
+  
+.tab-throbber[busy]:not([progress]){
+  background-image: url("Brave-Fox Images/chromium-throbber-not-prog.svg") !important;
+  filter: grayscale();  
+  opacity: 0.7 !important;
+}
+
+
+#urlbar-input {
+  margin-left: 3px !important;;
+}
+
+
+#TabsToolbar #firefox-view-button[open] > .toolbarbutton-icon,
+.tab-background:is([selected], [multiselected]) {
+  box-shadow: 0 0 4px rgba(0,0,0,.1) !important;;}
+
+
+
+/*menu button margin right*/
+#PanelUI-menu-button {
+  margin-right: 5px !important;
+}
+
+/* Fix height urlbar not same as blue border focused
+#urlbar, #searchbar {
+  min-height: 30px !important;;
+}*/
+
+
+#identity-box[pageproxystate="valid"]:is(.notSecureText, .chromeUI, .extensionPage) > .identity-box-button,
+#urlbar-label-box {
+  padding-inline: var(--urlbar-icon-padding) !important;
+}
