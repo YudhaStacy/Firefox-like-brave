@@ -14,7 +14,7 @@ this theme based on Brave-Fox] from Soft-Bred.
 
 ## How To Install
 1. Go to the URL `about:config`
-2. Ensure the following preferences are true:
+2. Ensure the following preferences are !true:
     ```
     toolkit.legacyUserProfileCustomizations.stylesheets
     svg.context-properties.content.enabled
