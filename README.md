@@ -25,4 +25,6 @@ this theme based on Brave-Fox] from Soft-Bred.
 8. Extract and copy/move all file to `chrome` folder
 9. Enjoy
 
-
+## Color Theme
+I Make theme color on addons mozilla for make looks like brave
+![Brave Theme](https://addons.mozilla.org/en-US/firefox/user/18534883/)
