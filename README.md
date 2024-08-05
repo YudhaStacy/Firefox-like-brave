@@ -13,11 +13,13 @@ this theme based on Brave-Fox] from Soft-Bred.
 5. context menu look like chrome/brave, this css from Material-Fox
 
 ## How To Install
-1. Go to the URL about:config.
+1. Go to the URL `about:config`
 2. Ensure the following preferences are true:
+    ```
     toolkit.legacyUserProfileCustomizations.stylesheets
     svg.context-properties.content.enabled
     layout.css.color-mix.enabled
+    ```
 4. Go to the URL about:support.
 5. Find the Profile Folder category and click the Open Folder button.
 6. make folder `chrome`
