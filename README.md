@@ -10,6 +10,7 @@ this theme based from [Brave-Fox](https://github.com/Soft-Bred/Brave-Fox/) by [S
 3. Adding tab separator, css from firefox-csshacks-master
 4. Make audio icon inline, and replace fav icon with audio icon when pinned
 5. context menu look like chrome/brave, this css from Material-Fox
+6. Change throbber icon load
 
 ## Preview
 ![Preview(2)](https://github.com/user-attachments/assets/7f5eefd8-4913-4a52-a66d-e234e8cc69d0)
