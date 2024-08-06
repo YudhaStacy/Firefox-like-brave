@@ -331,3 +331,6 @@
   -moz-context-properties: fill !important;
   fill: var(--md-icon-color-primary) !important;
 }
+#appMenu-report-broken-site-button{
+  list-style-image: var(--md-report-icon) !important;
+}
